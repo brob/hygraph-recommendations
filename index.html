@@ -1,0 +1,19 @@
+---
+layout: base.html
+
+---
+
+<h1>Submit a recommendation</h1>
+<form action="">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+    
+    <label for="recommendation">Recommendation (markdown accepted)</label>
+    <textarea name="recommendation" id="recommendation" cols="30" rows="10"></textarea>
+    <input type="submit" value="Submit">
+</form>
+
+<h1>Recommendations</h1>
+{% for recommendation in recommendations %}
+    <li><a href="/recommendations/{{recommendation.slug}}">{{ recommendation.title }}</a></li>
+{% endfor %}

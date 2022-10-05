@@ -1,0 +1,13 @@
+---
+pagination:
+    data: recommendations
+    alias: recommendation
+    addAllPagesToCollections: true
+    size: 1
+permalink: /recommendations/{{ recommendation.slug }}/
+layout: base.html
+---
+
+<h1>{{ recommendation.title }}</h1>
+<p>Submitted by {{ recommendation.name }}</p>
+{{ recommendation.body | markdown }}
